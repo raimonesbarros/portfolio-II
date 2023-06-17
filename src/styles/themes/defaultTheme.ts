@@ -4,6 +4,5 @@ export const defaultTheme = {
   text: '#E5E5D6',
   background: '#000000',
   gray600: '#666666',
-  gray300: '#333333'
-
+  gray300: '#333333',
 } as const
