@@ -1,14 +1,15 @@
 import { styled } from 'styled-components'
 
-export const SkillsContainer = styled.section`
+export const SkillsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
-export const SkillsContent = styled.div`
+export const SkillsContainer = styled.div`
   width: 100%;
   max-width: 1120px;
   min-height: calc((100vh - 4.75rem) / 2);
+  padding-bottom: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -44,10 +45,10 @@ export const Card = styled.div`
 
   p {
     text-align: center;
+    font-weight: 100;
     padding: 0 0.5rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.06rem;
     color: ${(p) => p.theme.text};
-    opacity: 0.75;
   }
 `
 export const TechsContent = styled.div`
@@ -69,5 +70,5 @@ export const Techs = styled.div`
   gap: 1rem;
   flex-wrap: wrap;
 
-  padding: 0 3rem;
+  padding: 1rem 3rem;
 `

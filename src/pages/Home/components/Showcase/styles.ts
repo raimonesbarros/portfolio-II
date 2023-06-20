@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-export const ShowcaseContainer = styled.div`
+export const ShowcaseSection = styled.section`
   width: 100%;
   position: relative;
   min-height: calc(100vh - 4.75rem);
@@ -11,7 +11,7 @@ export const ShowcaseContainer = styled.div`
   align-items: center;
 `
 
-export const ShowcaseContent = styled.div`
+export const ShowcaseContainer = styled.div`
   width: 100%;
   max-width: 1120px;
   height: calc(100vh - 4.75rem);
@@ -76,9 +76,10 @@ export const ShowcaseDescription = styled.div`
   }
 
   padding-left: 20%;
+  transform: translatey(-2.35rem);
 
   p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 100;
     color: ${(p) => p.theme.gray600};
     white-space: nowrap;
@@ -97,7 +98,7 @@ export const ShowcaseDescription = styled.div`
   }
   p:nth-child(6) {
     width: 9.6rem;
-    border-right: 3px solid ${(p) => p.theme.text};
+    border-right: 2px solid ${(p) => p.theme.text};
     animation: appear 3.3s normal, cursors 0.5s infinite normal,
       writing 1s 3.2s steps(9) normal;
   }

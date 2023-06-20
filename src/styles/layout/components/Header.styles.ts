@@ -12,6 +12,7 @@ export const HeaderContainer = styled.header`
   justify-content: center;
 
   background: ${(p) => p.theme.background};
+  z-index: 99;
 `
 
 export const HeaderContent = styled.div`
@@ -31,15 +32,27 @@ export const HeaderContent = styled.div`
   nav {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    column-gap: 0.5rem;
 
     text-transform: uppercase;
     font-weight: 700;
 
-    a {
+    a:not(:has(img)) {
       display: flex;
       align-items: center;
       line-height: 100%;
+
+      padding: 0.3rem 0.5rem;
+      border-bottom-right-radius: 8px;
+
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid ${(p) => p.theme.primary};
+        border-right: 2px solid ${(p) => p.theme.primary};
+        transition: 4ms;
+      }
     }
   }
 `
@@ -50,10 +63,6 @@ export const Socials = styled.div`
   cursor: pointer;
 
   a svg {
-    color: ${(p) => p.theme.primary};
-
-    svg:last-child {
-      color: ${(p) => p.theme.text};
-    }
+    color: ${(p) => p.theme.text};
   }
 `

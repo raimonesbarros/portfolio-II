@@ -1,7 +1,7 @@
 import { NavLink, Link } from 'react-router-dom'
 import logo from '../../../assets/logo.svg'
 import { HeaderContainer, HeaderContent, Socials } from './Header.styles'
-import { GithubLogo, LinkedinLogo, Sun } from '@phosphor-icons/react'
+import { Sun } from '@phosphor-icons/react'
 
 export function Header() {
   function handleChangeTheme() {
@@ -15,17 +15,23 @@ export function Header() {
           <img src={logo} alt="" />
         </Link>
         <nav>
-          <NavLink to={'/'}>INÍCIO</NavLink>
+          <NavLink to={'#showcase'}>INÍCIO</NavLink>
           <NavLink to={'/projects'}>PROJETOS</NavLink>
           <NavLink to={'/blog'}>BLOG</NavLink>
           <NavLink to={'/#about'}>SOBRE</NavLink>
           <NavLink to={'/#contact'}>CONTATO</NavLink>
           <Socials>
             <a href="https://www.linkedin.com/in/raimones-barros-b6577492/">
-              <LinkedinLogo size={20} weight="fill" />
+              <img
+                src="https://icongr.am/devicon/linkedin-plain.svg?size=20&color=45c7af"
+                alt=""
+              />
             </a>
             <a href="https://github.com/raimonesbarros">
-              <GithubLogo size={20} />
+              <img
+                src="https://icongr.am/fontawesome/github.svg?size=20&color=45c7af"
+                alt=""
+              />
             </a>
             <Sun onClick={() => handleChangeTheme()} size={20} />
           </Socials>

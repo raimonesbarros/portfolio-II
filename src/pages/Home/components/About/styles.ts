@@ -1,39 +1,55 @@
 import { styled } from 'styled-components'
 
-export const AboutContainer = styled.section`
+export const AboutSection = styled.section`
   width: 100%;
   min-height: calc(100vh - 4.75rem);
   display: flex;
   flex-direction: column;
   align-items: center;
 `
-export const AboutContent = styled.div`
+export const AboutContainer = styled.div`
   width: 100%;
   max-width: 1120px;
+  position: relative;
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  flex-grow: 1;
+
   border-bottom: 1px solid ${(p) => p.theme.gray600};
 
   img {
-    max-height: 80.5vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    max-width: 100vw;
+    z-index: 0;
   }
+`
+
+export const AboutContent = styled.div`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
 
   p {
     max-width: 500px;
-
     font-size: 1.25rem;
     font-weight: 100;
     text-align: right;
     line-height: 140%;
 
-    padding-right: 1.5rem;
     color: ${(p) => p.theme.text};
+    z-index: 1;
   }
 `
 export const Button = styled.button`
-  padding: 0.75rem 3.5rem;
+  padding: 0.5rem 3.5rem;
   font-weight: 700;
 
   display: flex;
@@ -41,7 +57,7 @@ export const Button = styled.button`
   gap: 1rem;
 
   float: right;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border-radius: 8px;
 
   background: ${(p) => p.theme.primary};

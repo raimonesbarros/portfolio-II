@@ -1,15 +1,15 @@
 import { CaretDown } from '@phosphor-icons/react'
 import {
+  ShowcaseSection,
   ShowcaseContainer,
-  ShowcaseContent,
   ShowcaseDescription,
   Strong,
 } from './styles'
 
 export function Showcase() {
   return (
-    <ShowcaseContainer>
-      <ShowcaseContent>
+    <ShowcaseSection id="showcase">
+      <ShowcaseContainer>
         <ShowcaseDescription>
           <p>Meu nome é</p>
           <p>
@@ -25,7 +25,7 @@ export function Showcase() {
           </p>
         </ShowcaseDescription>
         <CaretDown size={40} />
-      </ShowcaseContent>
-    </ShowcaseContainer>
+      </ShowcaseContainer>
+    </ShowcaseSection>
   )
 }

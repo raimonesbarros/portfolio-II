@@ -3,16 +3,16 @@ import { Title } from '../../styles'
 import {
   Card,
   Cards,
+  SkillsSection,
   SkillsContainer,
-  SkillsContent,
   Techs,
   TechsContent,
 } from './styles'
 
 export function Skills() {
   return (
-    <SkillsContainer>
-      <SkillsContent>
+    <SkillsSection>
+      <SkillsContainer>
         <Title>
           <span>algumas</span>
           <strong>Habilidades</strong>
@@ -59,7 +59,7 @@ export function Skills() {
             </p>
           </Card>
         </Cards>
-      </SkillsContent>
+      </SkillsContainer>
       <TechsContent>
         <Title>
           <strong>Tecnologias</strong>
@@ -69,37 +69,45 @@ export function Skills() {
           <img
             src="https://icongr.am/material/language-html5.svg?size=70&color=45c7af"
             alt=""
+            title="HTML5"
           />
           <img
             src="https://icongr.am/devicon/css3-plain.svg?size=55&color=45c7af"
             alt=""
+            title="CSS3"
           />
           <img
             src="https://icongr.am/material/language-javascript.svg?size=70&color=45c7af"
             alt=""
+            title="JavaScript"
           />
           <img
             src="https://icongr.am/material/react.svg?size=70&color=45c7af"
             alt=""
+            title="ReactJS"
           />
           <img
             src="https://icongr.am/material/language-typescript.svg?size=70&color=45c7af"
             alt=""
+            title="TypeScript"
           />
           <img
             src="https://icongr.am/feather/figma.svg?size=55&color=45c7af"
             alt=""
+            title="Figma"
           />
           <img
             src="https://icongr.am/material/git.svg?size=70&color=45c7af"
             alt=""
+            title="Git"
           />
           <img
             src="https://icongr.am/material/github.svg?size=70&color=45c7af"
             alt=""
+            title="Github"
           />
         </Techs>
       </TechsContent>
-    </SkillsContainer>
+    </SkillsSection>
   )
 }
