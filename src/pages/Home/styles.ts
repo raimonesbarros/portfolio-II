@@ -9,7 +9,7 @@ export const Title = styled.h2`
 
   margin-top: 1rem;
 
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 100;
   color: ${(p) => p.theme.text};
 `

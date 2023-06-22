@@ -1,5 +1,5 @@
 import { ProjectContainer, ProjectInfo } from './Project.styles'
-import img from '../../assets/coffee.png'
+import img from '../../../../assets/coffee.png'
 
 export function Project() {
   return (

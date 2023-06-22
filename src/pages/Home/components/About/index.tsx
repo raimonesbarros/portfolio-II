@@ -5,7 +5,7 @@ import me from '../../../../assets/me.png'
 
 export function About() {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <AboutContainer>
         <Title>
           <span>um pouco</span>

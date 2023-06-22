@@ -27,6 +27,12 @@ export const AboutContainer = styled.div`
     max-width: 100vw;
     z-index: 0;
   }
+
+  @media screen and (width < 768px) {
+    img {
+      opacity: 0.7;
+    }
+  }
 `
 
 export const AboutContent = styled.div`

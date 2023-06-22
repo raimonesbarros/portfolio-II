@@ -18,8 +18,9 @@ export const HeaderContainer = styled.header`
 export const HeaderContent = styled.div`
   width: 100%;
   max-width: 1120px;
+  position: relative;
 
-  padding: 0 1rem;
+  padding: 0 2rem;
 
   display: flex;
   justify-content: space-between;
@@ -32,10 +33,13 @@ export const HeaderContent = styled.div`
   nav {
     display: flex;
     align-items: center;
-    column-gap: 0.5rem;
+    gap: 0.5rem;
 
     text-transform: uppercase;
     font-weight: 700;
+    line-height: 100%;
+
+    background: ${(p) => p.theme.background};
 
     a:not(:has(img)) {
       display: flex;
@@ -55,14 +59,37 @@ export const HeaderContent = styled.div`
       }
     }
   }
+
+  @media screen and (width > 768px) {
+    > div {
+      display: none;
+    }
+  }
+
+  @media screen and (width <= 768px) {
+    nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 4rem;
+      flex-direction: column;
+      padding: 0.5rem 0;
+      box-shadow: 0 1px 3px ${(p) => p.theme.gray300};
+    }
+  }
 `
 export const Socials = styled.div`
   display: flex;
   gap: 0.5rem;
+  line-height: 100%;
 
   cursor: pointer;
 
   a svg {
     color: ${(p) => p.theme.text};
   }
+`
+export const BtnMenu = styled.div`
+  color: ${(p) => p.theme.primary};
 `

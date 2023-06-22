@@ -18,15 +18,21 @@ export const SkillsContainer = styled.div`
   gap: 3rem;
 `
 export const Cards = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   row-gap: 2rem;
   column-gap: 1rem;
-  flex-wrap: wrap;
+  padding: 0 1rem;
+
+  @media screen and (width < 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (width < 520px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 export const Card = styled.div`
-  max-width: 250px;
+  max-width: 248px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,4 +77,17 @@ export const Techs = styled.div`
   flex-wrap: wrap;
 
   padding: 1rem 3rem;
+
+  img:nth-child(2),
+  img:nth-child(6) {
+    margin-left: 0.5rem;
+  }
+
+  @media screen and (width <= 768px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (width < 425px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `

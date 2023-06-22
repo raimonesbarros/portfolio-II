@@ -14,7 +14,7 @@ import {
 
 export function Contact() {
   return (
-    <ContactSection>
+    <ContactSection id="contact">
       <ContactContainer>
         <Title>
           <span>entre em</span> <strong>Contato</strong> <span>comigo</span>

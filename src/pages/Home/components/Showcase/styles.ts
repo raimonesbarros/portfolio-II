@@ -102,6 +102,10 @@ export const ShowcaseDescription = styled.div`
     animation: appear 3.3s normal, cursors 0.5s infinite normal,
       writing 1s 3.2s steps(9) normal;
   }
+
+  @media screen and (width <= 375px) {
+    padding-left: 10%;
+  }
 `
 export const Strong = styled.strong`
   color: ${(p) => p.theme.text};

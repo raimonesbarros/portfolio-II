@@ -28,4 +28,8 @@ export const ProjectsContent = styled.div`
   justify-content: space-between;
   gap: 2rem;
   overflow: hidden;
+
+  @media screen and (width < 768px) {
+    flex-direction: column;
+  }
 `

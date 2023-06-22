@@ -47,4 +47,10 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 50px;
   }
 
+  @media screen and (width <= 768px) {
+    body, input, textarea, button {
+      font-size: 0.875rem;
+    }
+  }
+
 `

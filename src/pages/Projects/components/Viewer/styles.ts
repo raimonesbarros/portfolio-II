@@ -2,10 +2,13 @@ import { styled } from 'styled-components'
 
 export const ViewerContainer = styled.div`
   width: 100%;
-  height: 100%;
 
   display: flex;
   flex-direction: column;
+
+  @media screen and (width > 768px) {
+    height: 100%;
+  }
 `
 export const ViewerContent = styled.div`
   height: 100%;
@@ -22,6 +25,12 @@ export const ViewerContent = styled.div`
   p {
     text-align: justify;
     padding: 0 1rem;
+  }
+
+  @media screen and (width <= 768px) {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
   }
 `
 export const Buttons = styled.div`
