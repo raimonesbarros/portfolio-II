@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media screen and (width <= 768px) {
-    body, input, textarea, button {
+    html, body, input, textarea, button {
       font-size: 0.875rem;
     }
   }
