@@ -4,11 +4,15 @@ import {
   BtnMenu,
   HeaderContainer,
   HeaderContent,
+  Navbar,
   Socials,
 } from './Header.styles'
 import { List, Sun, X } from '@phosphor-icons/react'
+import { useState } from 'react'
 
 export function Header() {
+  const [menu, setMenu] = useState('close')
+
   function handleChangeTheme() {
     console.log('Mudou o thema')
   }
@@ -19,8 +23,8 @@ export function Header() {
         <Link to={'/'}>
           <img src={logo} alt="" />
         </Link>
-        <nav>
-          <a href="/#">INÍCIO</a>
+        <Navbar state={menu}>
+          <NavLink to={'/'}>INÍCIO</NavLink>
           <NavLink to={'/projects'}>PROJETOS</NavLink>
           <NavLink to={'/blog'}>BLOG</NavLink>
           <a href="/#about">SOBRE</a>
@@ -40,10 +44,13 @@ export function Header() {
             </a>
             <Sun onClick={() => handleChangeTheme()} size={20} />
           </Socials>
-        </nav>
+        </Navbar>
         <BtnMenu>
-          <List size={40} weight="bold" />
-          <X size={40} weight="bold" />
+          {menu === 'close' ? (
+            <List size={40} weight="bold" onClick={() => setMenu('open')} />
+          ) : (
+            <X size={40} weight="bold" onClick={() => setMenu('close')} />
+          )}
         </BtnMenu>
       </HeaderContent>
     </HeaderContainer>

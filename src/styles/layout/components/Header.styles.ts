@@ -30,53 +30,67 @@ export const HeaderContent = styled.div`
     width: 7.8rem;
   }
 
-  nav {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 100%;
-
-    background: ${(p) => p.theme.background};
-
-    a:not(:has(img)) {
-      display: flex;
-      align-items: center;
-      line-height: 100%;
-
-      padding: 0.3rem 0.5rem;
-      border-bottom-right-radius: 8px;
-
-      border-bottom: 2px solid transparent;
-      border-right: 2px solid transparent;
-
-      &:hover {
-        border-bottom: 2px solid ${(p) => p.theme.primary};
-        border-right: 2px solid ${(p) => p.theme.primary};
-        transition: 4ms;
-      }
-    }
-  }
-
   @media screen and (width > 768px) {
     > div {
       display: none;
     }
   }
+`
 
-  @media screen and (width <= 768px) {
-    nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 4rem;
-      flex-direction: column;
-      padding: 0.5rem 0;
-      box-shadow: 0 1px 3px ${(p) => p.theme.gray300};
+interface NavbarProps {
+  state: string
+}
+
+export const Navbar = styled.nav<NavbarProps>`
+  @keyframes appearMenu {
+    from {
+      opacity: 0;
     }
+    to {
+      opacity: 1;
+    }
+  }
+  animation: appearMenu 0.5s normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 100%;
+
+  background: ${(p) => p.theme.background};
+
+  a:not(:has(img)) {
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+
+    padding: 0.3rem 0.5rem;
+    border-bottom-right-radius: 8px;
+
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid ${(p) => p.theme.primary};
+      border-right: 2px solid ${(p) => p.theme.primary};
+      transition: 4ms;
+    }
+  }
+
+  @media screen and (width > 768px) {
+    display: flex;
+  }
+  @media screen and (width <= 768px) {
+    display: ${(p) => (p.state === 'open' ? 'flex' : 'none')};
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    box-shadow: 0 1px 3px ${(p) => p.theme.gray300};
   }
 `
 export const Socials = styled.div`
