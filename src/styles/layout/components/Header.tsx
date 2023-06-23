@@ -7,15 +7,11 @@ import {
   Navbar,
   Socials,
 } from './Header.styles'
-import { List, Sun, X } from '@phosphor-icons/react'
+import { List, X } from '@phosphor-icons/react'
 import { useState } from 'react'
 
 export function Header() {
   const [menu, setMenu] = useState('close')
-
-  function handleChangeTheme() {
-    console.log('Mudou o thema')
-  }
 
   return (
     <HeaderContainer>
@@ -42,7 +38,6 @@ export function Header() {
                 alt=""
               />
             </a>
-            <Sun onClick={() => handleChangeTheme()} size={20} />
           </Socials>
         </Navbar>
         <BtnMenu>
