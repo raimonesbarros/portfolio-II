@@ -1,16 +1,27 @@
+import { projectsData } from '../../../../projectsData'
 import { Project } from './Project'
 import { ProjectsListContainer } from './styles'
 
-export function ProjectsList() {
+interface ProjectListProps {
+  projectToSee: (index: number) => void
+}
+
+export function ProjectsList({ projectToSee }: ProjectListProps) {
   return (
     <ProjectsListContainer>
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      {projectsData.map((project, i) => {
+        return (
+          <Project
+            key={project.id}
+            image={project.image}
+            title={project.title}
+            smallDescription={project.smallDescription}
+            tags={project.tags}
+            position={i}
+            onProjectToSee={projectToSee}
+          />
+        )
+      })}
     </ProjectsListContainer>
   )
 }

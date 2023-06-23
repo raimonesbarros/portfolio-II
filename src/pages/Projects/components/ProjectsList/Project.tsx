@@ -1,16 +1,31 @@
 import { ProjectContainer, ProjectInfo } from './Project.styles'
-import img from '../../../../assets/coffee.png'
 
-export function Project() {
+interface ProjectProps {
+  image: string
+  title: string
+  smallDescription: string
+  tags: string[]
+  position: number
+  onProjectToSee: (index: number) => void
+}
+
+export function Project({
+  image,
+  title,
+  smallDescription,
+  tags,
+  position,
+  onProjectToSee,
+}: ProjectProps) {
   return (
-    <ProjectContainer>
-      <img src={img} alt="" />
+    <ProjectContainer onClick={() => onProjectToSee(position)}>
+      <img src={image} alt="" />
       <ProjectInfo>
-        <h3>Coffee Delivery</h3>
-        <p>Loja virtual</p>
+        <h3>{title}</h3>
+        <p>{smallDescription}</p>
         <div>
-          <span>reactJS</span>
-          <span>typescript</span>
+          <span>{tags[0]}</span>
+          <span>{tags[1]}</span>
         </div>
       </ProjectInfo>
     </ProjectContainer>
