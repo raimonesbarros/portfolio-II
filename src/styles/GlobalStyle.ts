@@ -7,11 +7,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  :focus {
-    outline: 0;
-    box-shadow: 0 0 0 2px ${(p) => p.theme.primary};
-  }
-
   html, body {
     background: ${(p) => p.theme.background};
 
