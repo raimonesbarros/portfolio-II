@@ -15,16 +15,21 @@ export const ViewerContent = styled.div`
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 
   img {
     width: 100%;
   }
 
+  h2 {
+    padding: 0.5rem 0;
+  }
+
   p {
-    text-align: justify;
-    padding: 0 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0 1.5rem;
   }
 
   @media screen and (width <= 768px) {
@@ -35,8 +40,7 @@ export const ViewerContent = styled.div`
 `
 export const Buttons = styled.div`
   width: 100%;
-  transform: translatey(-60%);
-  margin-top: -3rem;
+  padding: 1rem 0;
 
   display: flex;
   justify-content: space-evenly;

@@ -45,6 +45,8 @@ export const AboutContent = styled.div`
 
   p {
     max-width: 500px;
+    padding-top: 2rem;
+
     font-size: 1.25rem;
     font-weight: 100;
     text-align: right;

@@ -6,12 +6,20 @@ import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
 interface BlogPostProps extends IssueType {
+  id: number | undefined
+  onPostViewer: (postNumber: number | undefined) => void
   createdAt?: string
 }
 
-export function BlogPosts({ title, createdAt, body }: BlogPostProps) {
+export function BlogPosts({
+  id,
+  title,
+  createdAt,
+  body,
+  onPostViewer,
+}: BlogPostProps) {
   return (
-    <BlogPostsContainer>
+    <BlogPostsContainer onClick={() => onPostViewer(id)}>
       <div>
         <h1>{title}</h1>
         <span>

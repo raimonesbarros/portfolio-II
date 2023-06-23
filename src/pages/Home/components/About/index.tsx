@@ -14,8 +14,9 @@ export function About() {
         <img src={me} alt="" />
         <AboutContent>
           <p>
-            Eu sou o <strong>Raimones</strong>, tenho <strong>27 anos</strong>{' '}
-            de idade. <strong>Profissional do comércio</strong> há 10 anos,
+            Eu sou o <strong>Raimones</strong>, tenho{' '}
+            <strong>{new Date().getFullYear() - 1995} anos</strong> de idade.{' '}
+            <strong>Profissional do comércio</strong> com 10 anos de atuação,
             entusiasta de tecnologia, em <strong>transição de carreira.</strong>
             <br />
             <br />

@@ -21,6 +21,12 @@ export function Viewer({
     <ViewerContainer>
       <ViewerContent>
         <img src={image} alt="" />
+        <h2>{title}</h2>
+        <div>
+          <span>{tags[0]}</span>
+          <span>{tags[1]}</span>
+        </div>
+        <p>{fullDescription}</p>
         <Buttons>
           <a href={deploy} target="_blank" rel="noreferrer">
             Ver mais
@@ -29,12 +35,6 @@ export function Viewer({
             Projeto
           </a>
         </Buttons>
-        <h2>{title}</h2>
-        <div>
-          <span>{tags[0]}</span>
-          <span>{tags[1]}</span>
-        </div>
-        <p>{fullDescription}</p>
       </ViewerContent>
     </ViewerContainer>
   )

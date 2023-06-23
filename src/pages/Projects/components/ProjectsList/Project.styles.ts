@@ -7,8 +7,15 @@ export const ProjectContainer = styled.div`
   display: flex;
   align-items: center;
 
-  background: ${(p) => p.theme.gray300};
+  background: ${(p) => p.theme.gray200};
   border-radius: 8px;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid ${(p) => p.theme.gray600};
+  }
+
+  cursor: pointer;
 
   img {
     width: 10rem;

@@ -34,14 +34,22 @@ export const FormContainer = styled.form`
     padding: 0.6rem 1rem;
     margin-top: 0.75rem;
 
-    border: 1px solid ${(p) => p.theme.gray300};
+    border: 1px solid ${(p) => p.theme.gray800};
     border-radius: 6px;
 
     color: ${(p) => p.theme.text};
-    background: ${(p) => p.theme.gray300};
+    background: ${(p) => p.theme.gray100};
 
     &::placeholder {
       color: ${(p) => p.theme.gray600};
+    }
+
+    &:hover {
+      border: 1px solid ${(p) => p.theme.primary};
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 2px ${(p) => p.theme.primary};
     }
   }
 
@@ -57,7 +65,12 @@ export const PostContainer = styled.div`
   gap: 2rem;
   margin-top: 3rem;
 
-  a {
-    color: ${(p) => p.theme.text};
+  > div {
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid ${(p) => p.theme.primary};
+    }
   }
 `

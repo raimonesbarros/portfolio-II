@@ -5,8 +5,8 @@ export const ProjectsListContainer = styled.div`
   flex-direction: column;
   gap: 0.5rem;
 
-  border-radius: 8px;
   overflow: auto;
+  border-bottom: 2px solid ${(p) => p.theme.gray600};
 
   @media screen and (width > 768px) {
     width: 80%;

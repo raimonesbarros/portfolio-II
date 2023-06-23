@@ -7,7 +7,7 @@ export const BlogPostsContainer = styled.div`
   padding: 2rem;
   border-radius: 10px;
   overflow: hidden;
-  background: ${(p) => p.theme.gray300};
+  background: ${(p) => p.theme.gray100};
 
   > div {
     display: flex;
@@ -24,7 +24,7 @@ export const BlogPostsContainer = styled.div`
     span {
       flex-shrink: 0;
       font-size: 0.875rem;
-      color: ${(p) => p.theme.gray600};
+      color: ${(p) => p.theme.gray800};
     }
   }
 

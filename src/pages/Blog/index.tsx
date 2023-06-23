@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { BlogPosts } from './components/BlogPosts'
 import { BlogContainer, BlogInfo, FormContainer, PostContainer } from './styles'
 import { api } from '../../fetch/axios'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { EmptyBlog } from './components/EmptyBlog'
 
@@ -30,6 +30,7 @@ interface IssueInfoType {
 
 export function Blog() {
   const [issues, setIssues] = useState<IssueInfoType>(Object)
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
@@ -52,6 +53,10 @@ export function Blog() {
   function handleNewSearch(data: { search?: string }) {
     fetchIssues(data.search)
     reset()
+  }
+
+  function handlePostVostViewer(postNumber: number | undefined) {
+    navigate(`/blog/post/${postNumber}`)
   }
 
   useEffect(() => {
@@ -82,13 +87,14 @@ export function Blog() {
       <PostContainer>
         {issues.items && issues.items.length > 0 ? (
           issues.items.map((issue) => (
-            <Link key={issue.number} to={`/blog/post/${issue.number}`}>
-              <BlogPosts
-                title={issue.title}
-                createdAt={issue.created_at}
-                body={issue.body}
-              />
-            </Link>
+            <BlogPosts
+              key={issue.number}
+              id={issue.number}
+              title={issue.title}
+              createdAt={issue.created_at}
+              body={issue.body}
+              onPostViewer={handlePostVostViewer}
+            />
           ))
         ) : (
           <EmptyBlog />
