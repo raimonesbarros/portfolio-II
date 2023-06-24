@@ -1,4 +1,5 @@
 import { CaretDown } from '@phosphor-icons/react'
+import dummy from '../../../../assets/dummy.png'
 import {
   ShowcaseSection,
   ShowcaseContainer,
@@ -10,6 +11,7 @@ export function Showcase() {
   return (
     <ShowcaseSection id="showcase">
       <ShowcaseContainer>
+        <img src={dummy} alt="" />
         <ShowcaseDescription>
           <p>Meu nome é</p>
           <p>

@@ -12,6 +12,7 @@ export const ShowcaseSection = styled.section`
 `
 
 export const ShowcaseContainer = styled.div`
+  position: relative;
   width: 100%;
   max-width: 1120px;
   height: calc(100vh - 4.75rem);
@@ -19,18 +20,23 @@ export const ShowcaseContainer = styled.div`
   padding: 0 1rem;
 
   border-bottom: 1px solid ${(p) => p.theme.gray600};
-  background: url('/src/assets/dummy.png') no-repeat right bottom;
 
   display: flex;
   align-items: center;
 
+  > img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
   svg {
     @keyframes arrow {
       from {
-        bottom: 7%;
+        bottom: 10%;
       }
       to {
-        bottom: 10%;
+        bottom: 17%;
       }
     }
 

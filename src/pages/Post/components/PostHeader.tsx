@@ -28,7 +28,7 @@ export function PostHeader({ post }: PostHeaderProps) {
   return (
     <PostHeaderContainer>
       <PostHeaderLinks>
-        <Link to="/">
+        <Link to="/blog">
           <img src={back} alt="link" />
           <span>Voltar</span>
         </Link>

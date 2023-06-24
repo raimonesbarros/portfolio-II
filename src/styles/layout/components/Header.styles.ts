@@ -45,6 +45,7 @@ export const Navbar = styled.nav<NavbarProps>`
   @keyframes appearMenu {
     from {
       opacity: 0;
+      margin-top: -1rem;
     }
     to {
       opacity: 1;
@@ -66,6 +67,7 @@ export const Navbar = styled.nav<NavbarProps>`
     align-items: center;
     line-height: 100%;
 
+    font-size: 1.2rem;
     padding: 0.3rem 0.5rem;
     border-bottom-right-radius: 8px;
 
@@ -87,15 +89,17 @@ export const Navbar = styled.nav<NavbarProps>`
     width: 100%;
     position: absolute;
     left: 0;
-    top: 4rem;
+    top: 4.75rem;
     flex-direction: column;
-    padding: 0.5rem 0;
+    padding: 1.2rem 0;
     box-shadow: 0 1px 3px ${(p) => p.theme.gray300};
+    background-color: ${(p) => p.theme.gray100};
   }
 `
 export const Socials = styled.div`
   display: flex;
   gap: 0.5rem;
+  margin-top: 0.5rem;
   line-height: 100%;
 
   cursor: pointer;

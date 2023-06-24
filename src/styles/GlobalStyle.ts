@@ -41,11 +41,4 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${(p) => p.theme.primary};
     border-radius: 50px;
   }
-
-  @media screen and (width <= 768px) {
-    html, body, input, textarea, button {
-      font-size: 0.875rem;
-    }
-  }
-
 `
