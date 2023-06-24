@@ -109,7 +109,7 @@ export const ShowcaseDescription = styled.div`
       writing 1s 3.2s steps(9) normal;
   }
 
-  @media screen and (width <= 375px) {
+  @media screen and (width <= 650px) {
     padding-left: 10%;
   }
 `
