@@ -16,8 +16,14 @@ export function Header() {
   const [menu, setMenu] = useState('close')
 
   function navigateToPage(local: string) {
+    setMenu('close')
     navigate(local)
     animateScroll.scrollToTop()
+  }
+
+  function navigateTo(local: string) {
+    setMenu('close')
+    navigate(local)
   }
 
   return (
@@ -32,7 +38,7 @@ export function Header() {
             smooth={true}
             offset={-76}
             duration={500}
-            onClick={() => navigate('/')}
+            onClick={() => navigateTo('/')}
           >
             INÍCIO
           </Link>
@@ -43,7 +49,7 @@ export function Header() {
             smooth={true}
             offset={-76}
             duration={500}
-            onClick={() => navigate('/')}
+            onClick={() => navigateTo('/')}
           >
             SOBRE
           </Link>
@@ -51,18 +57,26 @@ export function Header() {
             to={'contact'}
             smooth={true}
             duration={500}
-            onClick={() => navigate('/')}
+            onClick={() => navigateTo('/')}
           >
             CONTATO
           </Link>
-          <Socials>
-            <a href="https://www.linkedin.com/in/raimones-barros-b6577492/">
+          <Socials onClick={() => setMenu('close')}>
+            <a
+              href="https://www.linkedin.com/in/raimones-barros-b6577492/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="https://icongr.am/devicon/linkedin-plain.svg?size=20&color=45c7af"
                 alt=""
               />
             </a>
-            <a href="https://github.com/raimonesbarros">
+            <a
+              href="https://github.com/raimonesbarros"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="https://icongr.am/fontawesome/github.svg?size=20&color=45c7af"
                 alt=""
