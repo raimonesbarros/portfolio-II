@@ -1,6 +1,7 @@
 import { ArrowCircleUp } from '@phosphor-icons/react'
 import { FooterContainer, FooterContent } from './Footer.styles'
 import logo from '../../../assets/logo.svg'
+import { animateScroll } from 'react-scroll'
 
 export function Footer() {
   return (
@@ -12,7 +13,7 @@ export function Footer() {
           </strong>{' '}
           | <span>Todos os direitos reservados</span>
         </p>
-        <a href="#">
+        <a onClick={animateScroll.scrollToTop}>
           <ArrowCircleUp size={35} />
         </a>
       </FooterContent>
