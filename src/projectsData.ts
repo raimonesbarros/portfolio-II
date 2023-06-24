@@ -7,7 +7,7 @@ export const projectsData = [
     image: coffee,
     title: 'Coffee Delivery',
     smallDescription: 'Loja virtual',
-    tags: ['ReactJS', 'TypeScript'],
+    tags: ['HTML', '+libs', 'CSS', 'JavaScript', 'ReactJS', 'TypeScript'],
     fullDescription:
       'Loja virtual - cafeteria - com recursos de compra online, possibilidade de navegar pela loja, adicionar produtos ao ao carrinho, alterar quantidade, remover itens do carrinho e finalizar pedido informando endereço de entraga e forma de pagamento',
     deploy: 'https://raimones-coffee-delivery.vercel.app',

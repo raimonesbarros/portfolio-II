@@ -16,7 +16,6 @@ export function ProjectsList({ projectToSee }: ProjectListProps) {
             image={project.image}
             title={project.title}
             smallDescription={project.smallDescription}
-            tags={project.tags}
             position={i}
             onProjectToSee={projectToSee}
           />

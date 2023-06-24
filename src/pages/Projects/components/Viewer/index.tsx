@@ -1,3 +1,4 @@
+import { Tag } from '../Tag'
 import { Buttons, ViewerContainer, ViewerContent } from './styles'
 
 interface ViewerProps {
@@ -23,8 +24,9 @@ export function Viewer({
         <img src={image} alt="" />
         <h2>{title}</h2>
         <div>
-          <span>{tags[0]}</span>
-          <span>{tags[1]}</span>
+          {tags.map((tag, i) => {
+            return <Tag key={i} content={tag} />
+          })}
         </div>
         <p>{fullDescription}</p>
         <Buttons>
