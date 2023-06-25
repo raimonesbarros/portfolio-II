@@ -12,7 +12,7 @@ export const ProjectContainer = styled.div`
   border: 1px solid transparent;
 
   &:hover {
-    border: 1px solid ${(p) => p.theme.gray600};
+    border: 1px solid ${(p) => p.theme.gray800};
   }
 
   cursor: pointer;

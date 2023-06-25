@@ -71,8 +71,9 @@ export function Blog() {
         <span>
           {issues.total_count &&
             (issues.total_count <= 1
-              ? issues.total_count + ' publicação'
-              : issues.total_count + ' publicações')}
+              ? issues.total_count
+              : issues.total_count)}{' '}
+          publicações
         </span>
       </BlogInfo>
       <FormContainer onSubmit={handleSubmit(handleNewSearch)}>

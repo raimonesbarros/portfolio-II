@@ -14,7 +14,7 @@ export function Footer() {
           | <span>Todos os direitos reservados</span>
         </p>
         <a onClick={animateScroll.scrollToTop}>
-          <ArrowCircleUp size={35} />
+          <ArrowCircleUp size={40} />
         </a>
       </FooterContent>
     </FooterContainer>

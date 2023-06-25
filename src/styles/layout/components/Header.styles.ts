@@ -92,20 +92,29 @@ export const Navbar = styled.nav<NavbarProps>`
     top: 4.75rem;
     flex-direction: column;
     padding: 1.2rem 0;
-    box-shadow: 0 1px 3px ${(p) => p.theme.gray300};
-    background-color: ${(p) => p.theme.gray100};
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 3px ${(p) => p.theme.gray300};
+    background-image: linear-gradient(
+      to bottom,
+      ${(p) => p.theme.background} 60%,
+      ${(p) => p.theme.gray100}
+    );
   }
 `
 export const Socials = styled.div`
   display: flex;
+  align-items: center;
   gap: 0.5rem;
-  margin-top: 0.5rem;
   line-height: 100%;
 
   cursor: pointer;
 
   a svg {
     color: ${(p) => p.theme.text};
+  }
+
+  @media screen and (width <= 768px) {
+    margin-top: 0.5rem;
   }
 `
 export const BtnMenu = styled.div`

@@ -68,7 +68,7 @@ export function Header() {
               rel="noreferrer"
             >
               <img
-                src="https://icongr.am/devicon/linkedin-plain.svg?size=20&color=45c7af"
+                src="https://icongr.am/devicon/linkedin-plain.svg?size=26&color=45c7af"
                 alt=""
               />
             </a>
@@ -78,7 +78,7 @@ export function Header() {
               rel="noreferrer"
             >
               <img
-                src="https://icongr.am/fontawesome/github.svg?size=20&color=45c7af"
+                src="https://icongr.am/fontawesome/github.svg?size=26&color=45c7af"
                 alt=""
               />
             </a>
@@ -86,9 +86,9 @@ export function Header() {
         </Navbar>
         <BtnMenu>
           {menu === 'close' ? (
-            <List size={40} weight="bold" onClick={() => setMenu('open')} />
+            <List size={50} weight="bold" onClick={() => setMenu('open')} />
           ) : (
-            <X size={40} weight="bold" onClick={() => setMenu('close')} />
+            <X size={50} weight="bold" onClick={() => setMenu('close')} />
           )}
         </BtnMenu>
       </HeaderContent>

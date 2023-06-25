@@ -25,6 +25,7 @@ export const BlogInfo = styled.div`
 
   span {
     font-size: 0.875rem;
+    color: ${(p) => p.theme.gray800};
   }
 `
 export const FormContainer = styled.form`

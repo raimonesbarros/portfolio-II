@@ -27,9 +27,9 @@ export const ViewerContent = styled.div`
   }
 
   p {
-    text-align: center;
+    text-align: justify;
     margin-top: 0.5rem;
-    padding: 0 1.5rem;
+    padding: 0 0.5rem;
   }
 
   @media screen and (width <= 768px) {
@@ -43,7 +43,7 @@ export const Buttons = styled.div`
   padding: 1rem 0;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 
   a {

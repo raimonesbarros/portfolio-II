@@ -5,7 +5,7 @@ export const PostHeaderContainer = styled.div`
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 
-  padding: 2rem;
+  padding: 1rem;
 
   h1 {
     font-size: 1.5rem;
@@ -23,7 +23,7 @@ export const PostHeaderLinks = styled.div`
   align-items: center;
   text-transform: uppercase;
 
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 
   a {
     display: flex;
@@ -36,6 +36,7 @@ export const PostHeaderInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex-wrap: nowrap;
 
   p {
     display: flex;
@@ -56,5 +57,9 @@ export const PostHeaderInfo = styled.div`
       flex-grow: 0;
       color: ${(p) => p.theme.text};
     }
+  }
+
+  @media screen and (width <= 768px) {
+    gap: 1rem;
   }
 `
