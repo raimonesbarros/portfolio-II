@@ -36,5 +36,9 @@ export const BlogPostsContainer = styled.div`
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    img {
+      width: 100%;
+    }
   }
 `
