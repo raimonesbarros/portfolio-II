@@ -1,7 +1,7 @@
-import { ArrowCircleUp } from '@phosphor-icons/react'
-import { FooterContainer, FooterContent } from './Footer.styles'
-import logo from '../../../assets/logo.svg'
-import { animateScroll } from 'react-scroll'
+import { ArrowCircleUp } from "@phosphor-icons/react"
+import { FooterContainer, FooterContent } from "./Footer.styles"
+import logo from "../../../assets/logo.svg"
+import { Link, animateScroll } from "react-scroll"
 
 export function Footer() {
   return (
@@ -10,12 +10,19 @@ export function Footer() {
         <p>
           <strong>
             <img src={logo} alt="" /> &copy; 2022 - {new Date().getFullYear()}
-          </strong>{' '}
+          </strong>{" "}
           | <span>Todos os direitos reservados</span>
         </p>
-        <a onClick={animateScroll.scrollToTop}>
+        <Link
+          href="/#"
+          to={"/#"}
+          smooth={true}
+          offset={-76}
+          duration={500}
+          onClick={animateScroll.scrollToTop}
+        >
           <ArrowCircleUp size={40} />
-        </a>
+        </Link>
       </FooterContent>
     </FooterContainer>
   )

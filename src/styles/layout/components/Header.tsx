@@ -1,67 +1,95 @@
-import { useNavigate } from 'react-router-dom'
-import { Link, animateScroll } from 'react-scroll'
-import logo from '../../../assets/logo.svg'
+import { useNavigate } from "react-router-dom"
+import { Link, animateScroll } from "react-scroll"
+import logo from "../../../assets/logo.svg"
 import {
   BtnMenu,
   HeaderContainer,
   HeaderContent,
   Navbar,
   Socials,
-} from './Header.styles'
-import { List, X } from '@phosphor-icons/react'
-import { useState } from 'react'
+} from "./Header.styles"
+import { List, X } from "@phosphor-icons/react"
+import { useState } from "react"
 
 export function Header() {
   const navigate = useNavigate()
-  const [menu, setMenu] = useState('close')
+  const [menu, setMenu] = useState("close")
 
   function navigateToPage(local: string) {
-    setMenu('close')
+    setMenu("close")
     navigate(local)
     animateScroll.scrollToTop()
   }
 
   function navigateTo(local: string) {
-    setMenu('close')
+    setMenu("close")
     navigate(local)
   }
 
   return (
     <HeaderContainer>
       <HeaderContent>
-        <a onClick={() => navigateToPage('/')}>
+        <Link
+          href="/"
+          to={"/"}
+          smooth={true}
+          offset={-76}
+          duration={500}
+          onClick={() => navigateToPage("/")}
+        >
           <img src={logo} alt="" />
-        </a>
+        </Link>
         <Navbar state={menu}>
           <Link
-            to={'showcase'}
+            href="/#showcase"
+            to={"showcase"}
             smooth={true}
             offset={-76}
             duration={500}
-            onClick={() => navigateTo('/')}
+            onClick={() => navigateTo("/")}
           >
             INÍCIO
           </Link>
-          <a onClick={() => navigateToPage('/projects')}>PROJETOS</a>
-          <a onClick={() => navigateToPage('/blog')}>BLOG</a>
           <Link
-            to={'about'}
+            href="/projects"
+            to={"/#"}
             smooth={true}
             offset={-76}
             duration={500}
-            onClick={() => navigateTo('/')}
+            onClick={() => navigateToPage("/projects")}
+          >
+            PROJETOS
+          </Link>
+          <Link
+            href="/blog"
+            to={"/#"}
+            smooth={true}
+            offset={-76}
+            duration={500}
+            onClick={() => navigateToPage("/blog")}
+          >
+            BLOG
+          </Link>
+          <Link
+            href="/about"
+            to={"about"}
+            smooth={true}
+            offset={-76}
+            duration={500}
+            onClick={() => navigateTo("/")}
           >
             SOBRE
           </Link>
           <Link
-            to={'contact'}
+            href="/contact"
+            to={"contact"}
             smooth={true}
             duration={500}
-            onClick={() => navigateTo('/')}
+            onClick={() => navigateTo("/")}
           >
             CONTATO
           </Link>
-          <Socials onClick={() => setMenu('close')}>
+          <Socials onClick={() => setMenu("close")}>
             <a
               href="https://www.linkedin.com/in/raimones-barros-b6577492/"
               target="_blank"
@@ -85,10 +113,10 @@ export function Header() {
           </Socials>
         </Navbar>
         <BtnMenu>
-          {menu === 'close' ? (
-            <List size={50} weight="bold" onClick={() => setMenu('open')} />
+          {menu === "close" ? (
+            <List size={50} weight="bold" onClick={() => setMenu("open")} />
           ) : (
-            <X size={50} weight="bold" onClick={() => setMenu('close')} />
+            <X size={50} weight="bold" onClick={() => setMenu("close")} />
           )}
         </BtnMenu>
       </HeaderContent>
