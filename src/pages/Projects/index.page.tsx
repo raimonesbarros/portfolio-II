@@ -1,17 +1,11 @@
 import { NextSeo, useState } from "~/modules"
 import { projectsData } from "../projectsData"
 import { ProjectsList, Viewer } from "./components"
+import { ProjectsContainer, ProjectsContent, ProjectsSection } from "./styles"
 import { MainTitle } from "../styles"
 import { SEOProjects } from "~/utils/next-seo/projects"
 import { Footer, Header } from "../components"
-import {
-  ProjectsContainer,
-  ProjectsContent,
-  ProjectsSection,
-  Span,
-  Strong,
-  Title,
-} from "./styles"
+import { Span, Strong, Title } from "../home/styles"
 
 const Projects = () => {
   const [current, setCurrent] = useState(0)
