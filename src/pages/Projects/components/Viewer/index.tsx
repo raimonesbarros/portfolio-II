@@ -1,43 +1,45 @@
-import { Tag } from '../Tag'
-import { Buttons, ViewerContainer, ViewerContent } from './styles'
+import {
+  Buttons,
+  FullImage,
+  Link,
+  Subtitle,
+  Tags,
+  Text,
+  ViewerContainer,
+  ViewerContent,
+} from "./styles"
+import { Tag } from ".."
 
-interface ViewerProps {
-  image: string
-  title: string
-  tags: string[]
-  fullDescription: string
-  deploy: string
-  repository: string
-}
-
-export function Viewer({
+const Viewer = ({
   image,
   title,
   tags,
   fullDescription,
   deploy,
   repository,
-}: ViewerProps) {
+}: ViewerProps) => {
   return (
     <ViewerContainer>
       <ViewerContent>
-        <img src={image} alt="" />
-        <h2>{title}</h2>
-        <div>
+        <FullImage src={image} width={600} alt={`Imagem do projeto ${title}`} />
+        <Subtitle>{title}</Subtitle>
+        <Tags>
           {tags.map((tag, i) => {
             return <Tag key={i} content={tag} />
           })}
-        </div>
-        <p>{fullDescription}</p>
+        </Tags>
+        <Text>{fullDescription}</Text>
         <Buttons>
-          <a href={deploy} target="_blank" rel="noreferrer">
+          <Link href={deploy} target="_blank" rel="noreferrer">
             Ver mais
-          </a>
-          <a href={repository} target="_blank" rel="noreferrer">
+          </Link>
+          <Link href={repository} target="_blank" rel="noreferrer">
             Projeto
-          </a>
+          </Link>
         </Buttons>
       </ViewerContent>
     </ViewerContainer>
   )
 }
+
+export default Viewer

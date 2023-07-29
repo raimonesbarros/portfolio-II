@@ -1,15 +1,21 @@
-import { Showcase } from './components/Showcase'
-import { Skills } from './components/Skills'
-import { About } from './components/About'
-import { Contact } from './components/Contact'
+import { NextSeo } from "~/modules"
+import { Showcase, Skills, About, Contact } from "./components"
+import { HomeContainer } from "./styles"
+import { SEOMain } from "~/utils"
+import { Footer, Header } from "../components"
 
-export function Home() {
+const Home = () => {
   return (
-    <>
+    <HomeContainer>
+      <NextSeo {...SEOMain} />
+      <Header />
       <Showcase />
       <Skills />
       <About />
       <Contact />
-    </>
+      <Footer />
+    </HomeContainer>
   )
 }
+
+export default Home

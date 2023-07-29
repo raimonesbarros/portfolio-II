@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import { NextImage, styled } from "~/modules"
 
 export const ShowcaseSection = styled.section`
   width: 100%;
@@ -49,6 +49,15 @@ export const ShowcaseContainer = styled.div`
     color: ${(p) => p.theme.primary};
   }
 `
+export const BgImage = styled(NextImage)``
+
+export const Text = styled.p`
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: ${(p) => p.theme.gray600};
+  white-space: nowrap;
+  overflow: hidden;
+`
 export const ShowcaseDescription = styled.div`
   @keyframes appear {
     0% {
@@ -83,14 +92,6 @@ export const ShowcaseDescription = styled.div`
 
   padding-left: 20%;
   transform: translatey(-2.35rem);
-
-  p {
-    font-size: 1.5rem;
-    font-weight: 100;
-    color: ${(p) => p.theme.gray600};
-    white-space: nowrap;
-    overflow: hidden;
-  }
 
   p:nth-child(2) {
     width: 9.5rem;

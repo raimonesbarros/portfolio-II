@@ -1,5 +1,5 @@
-import { Code, Devices, HandTap, Layout } from '@phosphor-icons/react'
-import { Title } from '../../styles'
+import { Code, Devices, HandTap, Layout } from "~/assets"
+import { Title, Span, Strong } from "../../styles"
 import {
   Card,
   Cards,
@@ -7,103 +7,122 @@ import {
   SkillsContainer,
   Techs,
   TechsContent,
-} from './styles'
+  Text,
+  Heading,
+  Icon,
+} from "./styles"
 
-export function Skills() {
+const Skills = () => {
   return (
     <SkillsSection>
       <SkillsContainer>
         <Title>
-          <span>algumas</span>
-          <strong>Habilidades</strong>
+          <Span>algumas</Span>
+          <Strong>Habilidades</Strong>
         </Title>
         <Cards>
           <Card>
-            <h3>
+            <Heading>
               <Code size={32} />
-              <strong>Código semântico</strong>
-            </h3>
-            <p>
+              <Strong>Código semântico</Strong>
+            </Heading>
+            <Text>
               Estrutura descritiva clara e objetiva para facilitar a leitura e
               interpretação, especialmente de motores de busca
-            </p>
+            </Text>
           </Card>
           <Card>
-            <h3>
+            <Heading>
               <Devices size={32} />
-              <strong>Responsividade</strong>
-            </h3>
-            <p>
+              <Strong>Responsividade</Strong>
+            </Heading>
+            <Text>
               Estilos preparados para se adaptar aos diferentes softwares e
               dispositivos
-            </p>
+            </Text>
           </Card>
           <Card>
-            <h3>
+            <Heading>
               <Layout size={32} />
-              <strong>Design atrativo</strong>
-            </h3>
-            <p>
+              <Strong>Design atrativo</Strong>
+            </Heading>
+            <Text>
               Criação visual utilizando técnicas de design como psicologia das
               cores, tipografia, hierarquia e etc...
-            </p>
+            </Text>
           </Card>
           <Card>
-            <h3>
+            <Heading>
               <HandTap size={32} />
-              <strong>Dinamicidade</strong>
-            </h3>
-            <p>
+              <Strong>Dinamicidade</Strong>
+            </Heading>
+            <Text>
               Uso de métodos dinâmicos e de interatividade com o usuário para
               garantir a melhor experiência
-            </p>
+            </Text>
           </Card>
         </Cards>
       </SkillsContainer>
       <TechsContent>
         <Title>
-          <strong>Tecnologias</strong>
-          <span>que estou utilizando</span>
+          <Strong>Tecnologias</Strong>
+          <Span>que estou utilizando</Span>
         </Title>
         <Techs>
-          <img
+          <Icon
             src="https://icongr.am/material/language-html5.svg?size=70&color=45c7af"
-            alt=""
+            width={70}
+            height={70}
+            alt="ícone da Linguagem de marcação HTML5"
             title="HTML5"
           />
-          <img
+          <Icon
             src="https://icongr.am/devicon/css3-plain.svg?size=55&color=45c7af"
-            alt=""
+            width={70}
+            height={70}
+            alt="ícone da Linguagem de estilos CSS3"
             title="CSS3"
           />
-          <img
+          <Icon
             src="https://icongr.am/material/language-javascript.svg?size=70&color=45c7af"
-            alt=""
+            width={70}
+            height={70}
+            alt="ícone da Linguagem de programação Javascript"
             title="JavaScript"
           />
-          <img
+          <Icon
             src="https://icongr.am/material/react.svg?size=70&color=45c7af"
-            alt=""
+            width={70}
+            height={70}
+            alt="ícone do framework reactJS"
             title="ReactJS"
           />
-          <img
+          <Icon
             src="https://icongr.am/material/language-typescript.svg?size=70&color=45c7af"
-            alt=""
+            width={70}
+            height={70}
+            alt="ícone da ferramenta de tipagem Typescript"
             title="TypeScript"
           />
-          <img
+          <Icon
             src="https://icongr.am/feather/figma.svg?size=55&color=45c7af"
-            alt=""
+            width={70}
+            height={70}
+            alt="ícone da Ferramenta de desing Figma"
             title="Figma"
           />
-          <img
+          <Icon
             src="https://icongr.am/material/git.svg?size=70&color=45c7af"
-            alt=""
+            width={70}
+            height={70}
+            alt="ícone da ferramenta de versionamento Git"
             title="Git"
           />
-          <img
+          <Icon
             src="https://icongr.am/material/github.svg?size=70&color=45c7af"
-            alt=""
+            width={70}
+            height={70}
+            alt="ícone da plataforma de hospedagem de código Github"
             title="Github"
           />
         </Techs>
@@ -111,3 +130,5 @@ export function Skills() {
     </SkillsSection>
   )
 }
+
+export default Skills

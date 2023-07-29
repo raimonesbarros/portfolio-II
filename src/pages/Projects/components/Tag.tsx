@@ -1,9 +1,7 @@
-import { TagContent } from './Tag.styles'
+import { TagContent } from "./Tag.styles"
 
-interface TagProps {
-  content: string
+const Tag = ({ content }: TagProps) => {
+  return <TagContent $variant={content}>{content}</TagContent>
 }
 
-export function Tag({ content }: TagProps) {
-  return <TagContent variant={content}>{content}</TagContent>
-}
+export default Tag

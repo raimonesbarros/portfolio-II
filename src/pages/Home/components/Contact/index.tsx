@@ -1,51 +1,55 @@
+import { Span, Strong, Title } from "../../styles"
 import {
-  EnvelopeSimple,
-  InstagramLogo,
-  LinkedinLogo,
   WhatsappLogo,
-} from '@phosphor-icons/react'
-import { Title } from '../../styles'
+  EnvelopeSimple,
+  LinkedinLogo,
+  InstagramLogo,
+} from "~/assets"
 import {
   ContactCard,
   ContactContainer,
   ContactSection,
   ContactsList,
-} from './styles'
+  Link,
+  Text,
+} from "./styles"
 
-export function Contact() {
+const Contact = () => {
   return (
     <ContactSection id="contact">
       <ContactContainer>
         <Title>
-          <span>entre em</span> <strong>Contato</strong> <span>comigo</span>
+          <Span>entre em</Span> <Strong>Contato</Strong> <Span>comigo</Span>
         </Title>
         <ContactsList>
           <ContactCard title="WhatsApp">
-            <a href="https://wa.link/vr2jtk">
+            <Link href="https://wa.link/vr2jtk">
               <WhatsappLogo size={50} weight="thin" />
-              <p>63 9 9230-4536</p>
-            </a>
+              <Text>63 9 9230-4536</Text>
+            </Link>
           </ContactCard>
           <ContactCard title="Email">
-            <a href="mailto:raimonesrg3@gmail.com">
+            <Link href="mailto:raimonesrg3@gmail.com">
               <EnvelopeSimple size={50} weight="thin" />
-              <p>raimonesrg3</p>
-            </a>
+              <Text>raimonesrg3</Text>
+            </Link>
           </ContactCard>
           <ContactCard title="Linkedin">
-            <a href="https://www.linkedin.com/in/raimones-barros-b6577492/">
+            <Link href="https://www.linkedin.com/in/raimones-barros-b6577492/">
               <LinkedinLogo size={50} weight="thin" />
-              <p>Raimones Barros</p>
-            </a>
+              <Text>Raimones Barros</Text>
+            </Link>
           </ContactCard>
           <ContactCard title="Instagram">
-            <a href="https://www.instagram.com/silvabarross/">
+            <Link href="https://www.instagram.com/silvabarross/">
               <InstagramLogo size={50} weight="thin" />
-              <p>@silvabarross</p>
-            </a>
+              <Text>@silvabarross</Text>
+            </Link>
           </ContactCard>
         </ContactsList>
       </ContactContainer>
     </ContactSection>
   )
 }
+
+export default Contact

@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import { styled } from "~/modules"
 
 export const SkillsSection = styled.section`
   display: flex;
@@ -33,29 +33,32 @@ export const Cards = styled.div`
 `
 export const Card = styled.div`
   max-width: 248px;
+  padding: 1rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
 
-  h3 {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  border: 1px solid ${(props) => props.theme.gray300};
+  border-radius: 6px;
+`
+export const Heading = styled.h3`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 
-    svg {
-      color: ${(p) => p.theme.primary};
-    }
+  svg {
+    color: ${(p) => p.theme.primary};
   }
-
-  p {
-    text-align: center;
-    font-weight: 100;
-    padding: 0 0.5rem;
-    letter-spacing: 0.06rem;
-    color: ${(p) => p.theme.text};
-  }
+`
+export const Text = styled.p`
+  text-align: center;
+  font-weight: 100;
+  padding: 0 0.5rem;
+  letter-spacing: 0.06rem;
+  color: ${(p) => p.theme.text};
 `
 export const TechsContent = styled.div`
   width: 100%;
@@ -91,3 +94,4 @@ export const Techs = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 `
+export const Icon = styled.img``

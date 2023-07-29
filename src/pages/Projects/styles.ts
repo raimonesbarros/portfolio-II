@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import { styled } from "~/modules"
 
 export const ProjectsSection = styled.section`
   width: 100%;

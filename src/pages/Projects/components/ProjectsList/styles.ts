@@ -1,6 +1,6 @@
-import { styled } from 'styled-components'
+import { styled } from "~/modules"
 
-export const ProjectsListContainer = styled.div`
+export const ProjectsListContainer = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

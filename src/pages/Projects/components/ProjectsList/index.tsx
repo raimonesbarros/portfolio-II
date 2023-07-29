@@ -1,12 +1,8 @@
-import { projectsData } from '../../../../projectsData'
-import { Project } from './Project'
-import { ProjectsListContainer } from './styles'
+import { projectsData } from "~/pages/projectsData"
+import { ProjectsListContainer } from "./styles"
+import Project from "./Project"
 
-interface ProjectListProps {
-  projectToSee: (index: number) => void
-}
-
-export function ProjectsList({ projectToSee }: ProjectListProps) {
+const ProjectsList = ({ projectToSee }: ProjectListProps) => {
   return (
     <ProjectsListContainer>
       {projectsData.map((project, i) => {
@@ -24,3 +20,5 @@ export function ProjectsList({ projectToSee }: ProjectListProps) {
     </ProjectsListContainer>
   )
 }
+
+export default ProjectsList

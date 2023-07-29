@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import { NextImage, styled } from "~/modules"
 
 export const AboutSection = styled.section`
   width: 100%;
@@ -34,6 +34,7 @@ export const AboutContainer = styled.div`
     }
   }
 `
+export const BgImage = styled(NextImage)``
 
 export const AboutContent = styled.div`
   width: 100%;
@@ -42,19 +43,18 @@ export const AboutContent = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
+`
+export const Text = styled.p`
+  max-width: 500px;
+  padding-top: 2rem;
 
-  p {
-    max-width: 500px;
-    padding-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: 100;
+  text-align: right;
+  line-height: 140%;
 
-    font-size: 1.25rem;
-    font-weight: 100;
-    text-align: right;
-    line-height: 140%;
-
-    color: ${(p) => p.theme.text};
-    z-index: 1;
-  }
+  color: ${(p) => p.theme.text};
+  z-index: 1;
 `
 export const Button = styled.button`
   padding: 0.5rem 3.5rem;

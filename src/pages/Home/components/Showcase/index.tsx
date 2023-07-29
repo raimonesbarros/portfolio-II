@@ -1,33 +1,43 @@
-import { CaretDown } from '@phosphor-icons/react'
-import dummy from '../../../../assets/dummy.png'
+import { MainTitle } from "~/pages/styles"
+import { CaretDown, dummy } from "~/assets"
 import {
   ShowcaseSection,
   ShowcaseContainer,
   ShowcaseDescription,
   Strong,
-} from './styles'
+  Text,
+  BgImage,
+} from "./styles"
 
-export function Showcase() {
+const Showcase = () => {
   return (
     <ShowcaseSection id="showcase">
+      <MainTitle>Portfólio de desenvolvimento front-end</MainTitle>
       <ShowcaseContainer>
-        <img src={dummy} alt="" />
+        <BgImage
+          src={dummy}
+          alt="Imagem de fundo: homem sentado de frente para uma tela de computador"
+          width={600}
+          priority
+        />
         <ShowcaseDescription>
-          <p>Meu nome é</p>
-          <p>
+          <Text>Meu nome é</Text>
+          <Text>
             <Strong>Raimones,</Strong>
-          </p>
-          <p>eu sou</p>
-          <p>
+          </Text>
+          <Text>eu sou</Text>
+          <Text>
             <Strong>Desenvolvedor</Strong>
-          </p>
-          <p>e esse é meu portfólio</p>
-          <p>
+          </Text>
+          <Text>e esse é meu portfólio</Text>
+          <Text>
             <Strong>Front-end.</Strong>
-          </p>
+          </Text>
         </ShowcaseDescription>
         <CaretDown size={40} />
       </ShowcaseContainer>
     </ShowcaseSection>
   )
 }
+
+export default Showcase

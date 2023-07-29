@@ -1,40 +1,63 @@
-import { FilePdf } from '@phosphor-icons/react'
-import { Title } from '../../styles'
-import { AboutSection, AboutContent, Button, AboutContainer } from './styles'
-import me from '../../../../assets/me.png'
+import { FilePdf, me } from "~/assets"
+import { Span, Strong, Title } from "../../styles"
+import {
+  AboutSection,
+  AboutContent,
+  Button,
+  AboutContainer,
+  BgImage,
+  Text,
+} from "./styles"
 
-export function About() {
+const About = () => {
+  const handleDownload = () => {
+    // using Java Script method to get PDF file
+    fetch("Raimones-dev-Curriculo.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob)
+        // Setting various property values
+        let alink = document.createElement("a")
+        alink.href = fileURL
+        alink.download = "Raimones-dev-Curriculo.pdf"
+        alink.click()
+      })
+    })
+  }
+
   return (
     <AboutSection id="about">
       <AboutContainer>
         <Title>
-          <span>um pouco</span>
-          <strong>Sobre mim</strong>
+          <Span>um pouco</Span>
+          <Strong>Sobre mim</Strong>
         </Title>
-        <img src={me} alt="" />
+        <BgImage src={me} alt="imagem de fundo: Foto de Raimones" width={400} />
         <AboutContent>
-          <p>
-            Eu sou o <strong>Raimones</strong>, tenho{' '}
-            <strong>{new Date().getFullYear() - 1995} anos</strong> de idade.{' '}
-            <strong>Profissional do comércio</strong> com 10 anos de atuação,
-            entusiasta de tecnologia, em <strong>transição de carreira.</strong>
+          <Text>
+            Eu sou o <Strong>Raimones</Strong>, tenho{" "}
+            <Strong>{new Date().getFullYear() - 1995} anos</Strong> de idade.{" "}
+            <Strong>Profissional do comércio</Strong> com 10 anos de atuação,
+            entusiasta de tecnologia, em <Strong>transição de carreira.</Strong>
             <br />
             <br />
-            Autodidata por necessidade, possuo conhecimentos na área de{' '}
-            <strong>Tecnologia da informação</strong>: Montagem e manutenção de
+            Autodidata por necessidade, possuo conhecimentos na área de{" "}
+            <Strong>Tecnologia da informação</Strong>: Montagem e manutenção de
             computadores, Hardwares e Softwares.
             <br />
-            <br />E focado em <strong>Desenvolvimento Front-end</strong>, busco
-            uma <strong>oportunidade</strong> de atuar nesse mercado e{' '}
-            <strong>aprender muito mais</strong> do que escrever códigos.
+            <br />E focado em <Strong>Desenvolvimento Front-end</Strong>, busco
+            uma <Strong>oportunidade</Strong> de atuar nesse mercado e{" "}
+            <Strong>aprender muito mais</Strong> do que escrever códigos.
             <br />
-            <Button>
+            <Button onClick={handleDownload}>
               <FilePdf size={25} />
               CURRICULUM
             </Button>
-          </p>
+          </Text>
         </AboutContent>
       </AboutContainer>
     </AboutSection>
   )
 }
+
+export default About

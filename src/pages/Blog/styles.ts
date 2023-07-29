@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import { styled } from "~/modules"
 
 export const BlogContainer = styled.div`
   width: 100%;
@@ -17,47 +17,52 @@ export const BlogInfo = styled.div`
   justify-content: space-between;
   margin-top: 1rem;
 
-  p {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: ${(p) => p.theme.text};
-  }
-
   span {
     font-size: 0.875rem;
     color: ${(p) => p.theme.gray800};
   }
 `
-export const FormContainer = styled.form`
-  input {
-    width: 100%;
+export const Span = styled.span`
+  font-size: 0.875rem;
+  color: ${(p) => p.theme.gray800};
+`
 
-    padding: 0.6rem 1rem;
-    margin-top: 0.75rem;
+export const Text = styled.p`
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: ${(p) => p.theme.text};
+`
 
-    border: 1px solid ${(p) => p.theme.gray800};
-    border-radius: 6px;
+export const FormContainer = styled.form``
+export const Input = styled.input`
+  width: 100%;
 
-    color: ${(p) => p.theme.text};
-    background: ${(p) => p.theme.gray100};
+  padding: 0.6rem 1rem;
+  margin-top: 0.75rem;
 
-    &::placeholder {
-      color: ${(p) => p.theme.gray600};
-    }
+  border: 1px solid ${(p) => p.theme.gray800};
+  border-radius: 6px;
 
-    &:hover {
-      border: 1px solid ${(p) => p.theme.primary};
-    }
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 2px ${(p) => p.theme.primary};
-    }
+  color: ${(p) => p.theme.text};
+  background: ${(p) => p.theme.gray100};
+
+  &::placeholder {
+    color: ${(p) => p.theme.gray600};
   }
 
-  button {
-    display: none;
+  &:hover {
+    border: 1px solid ${(p) => p.theme.primary};
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px ${(p) => p.theme.primary};
   }
 `
+
+export const Button = styled.button`
+  display: none;
+`
+
 export const PostContainer = styled.div`
   width: 100%;
   display: flex;
