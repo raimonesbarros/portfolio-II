@@ -1,5 +1,5 @@
 import { api } from "~/lib"
-import { Posts, EmptyBlog } from "./components"
+import { Posts, EmptyBlog } from "~/pages/Blog/components"
 import { NextSeo, useEffect, useForm, useRouter, useState } from "~/modules"
 import {
   BlogContainer,
