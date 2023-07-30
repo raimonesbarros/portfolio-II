@@ -10,7 +10,7 @@ import {
   PostContainer,
   Span,
   Text,
-} from "./styles"
+} from "src/pages/Blog/styles"
 import { SEOBlog } from "~/utils/next-seo/blog"
 import { Footer, Header } from "../components"
 import { MainTitle } from "../styles"
