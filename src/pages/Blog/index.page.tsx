@@ -1,5 +1,5 @@
 import { api } from "~/lib"
-import { Posts, EmptyBlog } from "~/pages/Blog/components"
+
 import { NextSeo, useEffect, useForm, useRouter, useState } from "~/modules"
 import {
   BlogContainer,
@@ -14,6 +14,7 @@ import {
 import { SEOBlog } from "~/utils/next-seo/blog"
 import { Footer, Header } from "../components"
 import { MainTitle } from "../styles"
+import { EmptyBlog, Posts } from "./components"
 
 const Blog = () => {
   const [issues, setIssues] = useState<IssueInfoType>(Object)
